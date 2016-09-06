@@ -3,14 +3,18 @@
   <head>
     <title>AdminPortal</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Configuration file application.rb -->
+    <%= stylesheet_link_tag '/assets/bootstrap.min', media: "all", 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag '/assets/datepicker3', media: "all", 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag '/assets/styles', media: "all", 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag '/assets/lumino.glyphs' %>
   </head>
 
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/sidebar' %>
-    <%= yield %>
+    <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+      <%= yield %>
+    </div>
   </body>
 </html>
