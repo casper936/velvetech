@@ -1,0 +1,50 @@
+<head>
+  <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+  <%= stylesheet_link_tag '/assets/jquery.bootstrap-touchspin.min', media: "screen", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag '/assets/select2.min', media: "screen", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag '/assets/bootstrap-datepicker3.standalone.min', media: "screen", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag '/assets/bootstrap-timepicker.min', media: "screen", 'data-turbolinks-track': 'reload' %>
+  <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+</head>
+
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class="mainTitle">New Equipments</h1>
+      <span class="mainDescription">We set out to create an easy, powerful and versatile form layout system. A combination of form styles and the Bootstrap grid means you can do almost anything.</span>
+    </div>
+  </div>
+</section>
+<!-- end: PAGE TITLE -->
+
+
+
+<div class="container-fluid container-fullw bg-white">
+  <div class="row">
+    <div class="col-md-8">
+        <%= render 'form', mbcpu: @mbcpu %>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Back', mbcpus_path %>
+
+<%= render 'shared/mainjs' %>
+<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<%= javascript_include_tag '/assets/jquery.maskedinput.min' %>
+<%= javascript_include_tag '/assets/jquery.bootstrap-touchspin.min' %>
+<%= javascript_include_tag '/assets/autosize.min' %>
+<%= javascript_include_tag '/assets/classie' %>
+<%= javascript_include_tag '/assets/selectFx' %>
+<%= javascript_include_tag '/assets/select2.min' %>
+<%= javascript_include_tag '/assets/bootstrap-datepicker.min' %>
+<%= javascript_include_tag '/assets/bootstrap-timepicker.min' %>
+<%= javascript_include_tag '/assets/form-elements' %>
+<script>
+  jQuery(document).ready(function() {
+    Main.init();
+    FormElements.init();
+  });
+</script>
+<!-- end: JavaScript Event Handlers for this page -->

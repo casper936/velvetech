@@ -1,2 +1,0 @@
-json.extract! equipment, :id, :invno, :brend, :model, :description, :motherboard, :memory, :mem_type, :ssd, :hdd, :cpu, :type_equip, :created_at, :updated_at
-json.url equipment_url(equipment, format: :json)

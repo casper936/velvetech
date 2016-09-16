@@ -1,0 +1,2 @@
+class Mbcpu < ApplicationRecord
+end

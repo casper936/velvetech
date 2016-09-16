@@ -1,0 +1,1 @@
+json.array! @mbcpus, partial: 'mbcpus/mbcpu', as: :mbcpu

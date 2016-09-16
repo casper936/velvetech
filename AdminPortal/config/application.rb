@@ -11,9 +11,23 @@ module AdminPortal
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    # config.assets.enabled = true
-     config.assets.paths << Rails.root.join("app", "assets", "fonts")
-     config.assets.paths << Rails.root.join('vendor', "assets", "javascripts", "bootstrap")
-     config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "bootstrap")
+    # CSS
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "bootstrap")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "fontawesome")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "themify-icons")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "animate")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "perfect-scrollbar")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "switchery")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "themes")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "DataTables")
+    config.assets.paths << Rails.root.join('vendor', "assets", "stylesheets", "bootstrap-datepicker")
+    # javascript
+    config.assets.paths << Rails.root.join('vendor', "assets", "javascripts","bootstrap")
+    config.assets.paths << Rails.root.join('vendor', "assets", "javascripts", "perfect-scrollbar")
+    config.assets.paths << Rails.root.join('vendor', "assets", "javascripts", "switchery")
+    # fonts
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    # other
+    config.assets.paths << Rails.root.join("app", "assets")
   end
 end

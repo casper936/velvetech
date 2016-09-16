@@ -1,0 +1,45 @@
+<%= form_for(mbcpu) do |f| %>
+  <% if mbcpu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mbcpu.errors.count, "error") %> prohibited this mbcpu from being saved:</h2>
+      <ul>
+      <% mbcpu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-md-6">
+    <fieldset>
+      <legend>MotherBoard/CPU</legend>
+          <div class="form-group">
+              <%= f.select(:type, [["Select type", 0], ["MotherBoard"], ["CPU"]], {:disabled => 0, :selected => 0}, {class: 'cs-select cs-skin-elastic'}) %>
+          </div>
+          <div class="form-group">
+              <%= f.text_field :brend, class: "form-control", placeholder: "brend" %>
+          </div>
+          <div class="form-group">
+              <%= f.text_field :model, class: "form-control", placeholder: "model" %>
+          </div>
+      <div class="panel panel-white">
+        <div class="panel-heading">
+          <div class="panel-title">
+            Descriptions
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="form-group">
+            <div class="note-editor">
+              <%= f.text_area :description, class: "form-control autosize area-animated-control"%>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= f.button :submit, class: "btn btn-primary pull-right" do %>
+          Create item <i class="fa fa-plus"></i>
+      <% end %>
+    </fieldset>
+    </div>
+  </div>
+<% end %>

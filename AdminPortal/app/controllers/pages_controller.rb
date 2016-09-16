@@ -2,9 +2,15 @@ class PagesController < ApplicationController
   def home
   end
 
-  def tables
+  def calendar
   end
 
-  def contact
+  def timeline
+  end
+
+  def user_profile
+  end
+
+  def acts
   end
 end

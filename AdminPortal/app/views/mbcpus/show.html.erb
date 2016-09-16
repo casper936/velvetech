@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @mbcpu.type %>
+</p>
+
+<p>
+  <strong>Brend:</strong>
+  <%= @mbcpu.brend %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @mbcpu.model %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mbcpu.description %>
+</p>
+
+<%= link_to 'Edit', edit_mbcpu_path(@mbcpu) %> |
+<%= link_to 'Back', mbcpus_path %>

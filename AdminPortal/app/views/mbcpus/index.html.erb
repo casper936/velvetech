@@ -1,0 +1,150 @@
+<p id="notice"><%= notice %></p>
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class="mainTitle">Equipments Tables</h1>
+      <span class="mainDescription">Refers to data arranged in rows and columns. A spreadsheet, for example, is a table. In relational database management systems, all information is stored in the form of tables. <small class="block">Webopedia - Online Tech Dictionary for IT Professionals</small></span>
+    </div>
+    <ol class="breadcrumb">
+      <li>
+        <span>Tables</span>
+      </li>
+      <li class="active">
+        <span>Equipments</span>
+      </li>
+    </ol>
+  </div>
+</section>
+<!-- end: PAGE TITLE -->
+<!-- start: DYNAMIC TABLE -->
+<div class="container-fluid container-fullw bg-white">
+  <div class="row">
+    <div class="col-md-1 space20">
+      <div class="btn-group">
+        <a href="#" data-toggle="dropdown" class="btn btn-wide btn-success dropdown-toggle">
+          Add new <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="presentation" class="dropdown-header">
+            Select equipment
+          </li>
+          <li>
+            <%= link_to 'PC', new_mbcpu_path %>
+          </li>
+          <li>
+            <%= link_to 'Monitor', new_mbcpu_path %>
+          </li>
+          <li>
+            <%= link_to 'UPS ', new_mbcpu_path %>
+          </li>
+          <li class="divider"></li>
+          <li role="presentation" class="dropdown-header">
+            Additional equipment
+          </li>
+          <li>
+            <%= link_to 'Mouse etc.', new_mbcpu_path %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h5 class="over-title margin-bottom-15">Computers <span class="text-bold"> Table</span></h5>
+      <p>
+        DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.
+      </p>
+      <table class="table table-striped table-bordered table-hover table-full-width" id="sample_1">
+        <thead>
+        <tr>
+          <th>Inv No.</th>
+          <th class="hidden-xs">Motherboard</th>
+          <th>Memory (MB)</th>
+          <th class="hidden-xs">CPU</th>
+          <th>SSD (GB)</th>
+          <th class="hidden-xs">HDD (GB)</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>0915</td>
+          <td class="hidden-xs">Gigabyte Technology Co.,
+            Ltd. Z97M-D3H
+          </td>
+          <td>16 384</td>
+          <td class="hidden-xs">Intel Core i5-4570</td>
+          <td>120</td>
+          <td class="hidden-xs">1 000</td>
+          <td><span class="label label-sm label-success">Active</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- end: DYNAMIC TABLE -->
+<!-- start: CONDENSED TABLE -->
+<div class="container-fluid container-fullw bg-white">
+  <div class="row">
+    <div class="col-md-6">
+      <h5 class="over-title margin-bottom-15">Monitors <span class="text-bold"> Table</span></h5>
+      <table class="table table-striped table-bordered table-hover table-full-width" id="sample_3">
+        <thead>
+        <tr>
+          <th>Inv No.</th>
+          <th class="hidden-xs">Brend</th>
+          <th>Model</th>
+          <th class="hidden-xs">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>M017</td>
+          <td class="hidden-xs">BenQ</td>
+          <td>BNQ78CE</td>
+          <td class="hidden-xs"><span class="label label-sm label-success">Active</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-6">
+      <h5 class="over-title margin-bottom-15">UPS <span class="text-bold"> Table</span></h5>
+      <table class="table table-striped table-bordered table-hover table-full-width" id="sample_4">
+        <thead>
+        <tr>
+          <th>Inv No.</th>
+          <th class="hidden-xs">Brend</th>
+          <th>Model</th>
+          <th class="hidden-xs">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>US-011</td>
+          <td class="hidden-xs">IPPon</td>
+          <td>Back Office 600</td>
+          <td class="hidden-xs"><span class="label label-sm label-success">Active</span></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- end: CONDENSED TABLE -->
+<!-- start: DYNAMIC TABLE -->
+
+<%= render 'shared/mainjs' %>
+<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<%= javascript_include_tag '/assets/select2.min' %>
+<%= javascript_include_tag '/assets/jquery.dataTables.min' %>
+<%= javascript_include_tag '/assets/table-data' %>
+<script>
+  jQuery(document).ready(function() {
+    Main.init();
+    TableData.init();
+  });
+</script>
+<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
