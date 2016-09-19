@@ -30,4 +30,21 @@
 
 <br>
 
+<!-- start: MAIN JAVASCRIPTS -->
+<%= render 'shared/mainjs' %>
+<!-- end: MAIN JAVASCRIPTS -->
+<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<%= javascript_include_tag '/assets/jquery.validate.min' %>
+<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<!-- start: CLIP-TWO JAVASCRIPTS -->
+<!-- start: JavaScript Event Handlers for this page -->
+<%= javascript_include_tag '/assets/login' %>
+<script>
+  jQuery(document).ready(function() {
+    Main.init();
+    Login.init();
+  });
+</script>
+<!-- end: JavaScript Event Handlers for this page -->
+
 <%= link_to 'New User', new_user_path %>

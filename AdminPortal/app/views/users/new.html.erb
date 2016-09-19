@@ -1,5 +1,38 @@
-<h1>New User</h1>
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1 class="mainTitle">Create a new user</h1>
+    </div>
+    <ol class="breadcrumb">
+      <li>
+        <span>Users</span>
+      </li>
+      <li class="active">
+        <span>new user</span>
+      </li>
+    </ol>
+  </div>
+</section>
+<!-- end: PAGE TITLE -->
 
 <%= render 'form', user: @user %>
+
+<!-- start: MAIN JAVASCRIPTS -->
+<%= render 'shared/mainjs' %>
+<!-- end: MAIN JAVASCRIPTS -->
+<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<%= javascript_include_tag '/assets/jquery.validate.min' %>
+<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<!-- start: CLIP-TWO JAVASCRIPTS -->
+<!-- start: JavaScript Event Handlers for this page -->
+<%= javascript_include_tag '/assets/login' %>
+<script>
+  jQuery(document).ready(function() {
+    Main.init();
+    Login.init();
+  });
+</script>
+<!-- end: JavaScript Event Handlers for this page -->
 
 <%= link_to 'Back', users_path %>
