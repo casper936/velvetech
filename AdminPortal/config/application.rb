@@ -26,6 +26,7 @@ module AdminPortal
     config.assets.paths << Rails.root.join('vendor', "assets", "javascripts", "perfect-scrollbar")
     config.assets.paths << Rails.root.join('vendor', "assets", "javascripts", "switchery")
     config.assets.paths << Rails.root.join('vendor', "assets", "javascripts", "jquery-validation")
+    config.assets.paths << Rails.root.join('vendor', "assets", "javascripts", "ckeditor")
     # fonts
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     # other

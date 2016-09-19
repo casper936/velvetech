@@ -15,24 +15,40 @@
   </div>
 </section>
 <!-- end: PAGE TITLE -->
-
-<%= render 'form', user: @user %>
+<div class="container-fluid container-fullw bg-white">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Register a new user</h2>
+      <p>
+        Create an account
+      </p>
+      <hr>
+      <%= render 'form', user: @user %>
+    </div>
+  </div>
+</div>
 
 <!-- start: MAIN JAVASCRIPTS -->
 <%= render 'shared/mainjs' %>
 <!-- end: MAIN JAVASCRIPTS -->
 <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<%= javascript_include_tag '/assets/ckeditor' %>
+<%= javascript_include_tag '/assets/adapters/jquery' %>
 <%= javascript_include_tag '/assets/jquery.validate.min' %>
 <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 <!-- start: CLIP-TWO JAVASCRIPTS -->
 <!-- start: JavaScript Event Handlers for this page -->
-<%= javascript_include_tag '/assets/login' %>
+<%= javascript_include_tag '/assets/form-validation' %>
 <script>
   jQuery(document).ready(function() {
     Main.init();
-    Login.init();
+    FormValidator.init();
   });
 </script>
 <!-- end: JavaScript Event Handlers for this page -->
 
-<%= link_to 'Back', users_path %>
+<div class="margin-top-30 margin-bottom-30">
+  <nav id="cl-effect-1" class="links cl-effect-1">
+    <%= link_to 'Back', users_path %>
+  </nav>
+</div>
